@@ -1,0 +1,28 @@
+service: example-sls-node-app
+
+frameworkVersion: ">=1.9.0 <2.0.0"
+
+# app and org for use with dashboard.serverless.com
+app: example-sls-node-app
+org: eliecerchicott
+
+plugins:
+  - serverless-pseudo-parameters
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, self:provider.stage}
+  region: us-east-1
+
+functions:
+  hello-world:
+    handler: src/functions/hello-world.
+    events:
+      - http:
+          path: /hello-world
+          method: get
+
+package:
+  exclude:
+    - package.json

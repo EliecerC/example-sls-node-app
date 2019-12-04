@@ -1,0 +1,15 @@
+{
+  "name": "example-sls-node-app",
+  "version": "1.0.0",
+  "description": "example node app",
+  "main": "src/index.js",
+  "author": "EliecerC",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "serverless-pseudo-parameters": "^2.5.0"
+  },
+  "dependencies": {
+    "serverless": "^1.59.0"
+  }
+}
